@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TIKKIT.com</title>
+  <link rel="stylesheet" href="1page.css">
+</head>
+<body>
+  
+  <nav class="navbar">
+    <div class="container nav-container">
+      <div class="nav-left">
+        <h1 class="logo">TIKKIT</h1>
+        <input type="text" id="nav-search" class="nav-search-bar" placeholder="Search...">
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  
+  <section id="home">
+    <div class="container">
+      <h2>Welcome to TIKKIT</h2>
+      <p>Your trusted solution for safe and convenient travel.</p>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container cards-grid" id="cards-container">
+      
+<a href="2page.html" class="card-link">
+  <div class="card" data-service="bus">
+    <img src="C:\Users\ronak\OneDrive\Desktop\text.html\8434857.jpg" alt="Bus" class="card-image">
+    <div class="card-content">
+      <h2>Bus Booking</h2>
+      <p>Comfortable and affordable bus services across major cities with daily schedules and online booking.</p>
+    </div>
+  </div>
+</a>
+
+
+<a href="3page.html" class="card-link">
+  <div class="card" data-service="train">
+    <img src="C:\Users\ronak\OneDrive\Desktop\text.html\8915911.jpg" alt="Train" class="card-image">
+    <div class="card-content">
+      <h2>Train Booking</h2>
+      <p>Fast and reliable train travel with modern amenities and wide coverage across the country.</p>
+    </div>
+  </div>
+</a>
+ </section>
+
+  <div class="slider-container">
+    <div class="slider-wrapper">
+      
+      <div class="slide"><img src="C:\Users\ronak\Downloads\hawa-mahal-6156123_640.jpg" alt="Image 1"></div>
+      <div class="slide"><img src="C:\Users\ronak\Downloads\river-661321_640.jpg"alt="Image 2"></div>
+      <div class="slide"><img src="C:\Users\ronak\Downloads\fort-4782737_640.jpg" alt="Image 3"></div>
+      <div class="slide"><img src="C:\Users\ronak\Downloads\india-294_640.jpg" alt="Image 4"></div>
+      <div class="slide"><img src="C:\Users\ronak\Downloads\tomb-7001562_640.jpg" alt="Image 5"></div>
+      <div class="slide"><img src="C:\Users\ronak\Downloads\victoria-166487_640.jpg" alt="Image 6"></div>
+
+      
+      <div class="slide"><img src="C:\Users\ronak\Downloads\hawa-mahal-6156123_640.jpg" alt="Image 1"></div>
+      <div class="slide"><img src="C:\Users\ronak\Downloads\river-661321_640.jpg" alt="Image 2"></div>
+      <div class="slide"><img src="C:\Users\ronak\Downloads\fort-4782737_640.jpg" alt="Image 3"></div>
+      <div class="slide"><img src="C:\Users\ronak\Downloads\india-294_640.jpg" alt="Image 4"></div>
+      <div class="slide"><img src="C:\Users\ronak\Downloads\tomb-7001562_640.jpg" alt="Image 5"></div>
+      <div class="slide"><img src="C:\Users\ronak\Downloads\victoria-166487_640.jpg" alt="Image 6"></div>
+    </div>
+  </div>
+
+
+  <footer>
+    <div class="foot">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h2>About Us :-</h2>
+          <p>We are committed to offering the best travel options to our customers, ensuring comfort, safety, and affordability in every journey.</p>
+        </div>
+        <div class="footer-section">
+          <h2>Contact Us :-</h2>
+          <p>Email: support@TIKKIT.com</p>
+          <p>Phone: +120-222-333</p>
+        </div>
+      </div>
+    </div>
+    <p>&copy; 2025 TIKKIT. All rights reserved.</p>
+    <p>
+        <a href="#">Privacy Policy</a> | 
+        <a href="#">Terms of Service</a>
+    </p>
+  </footer>
+
+
+  <script>
+    const searchInput = document.getElementById('nav-search');
+    const cards = document.querySelectorAll('.card');
+
+    searchInput.addEventListener('input', function() {
+      const query = this.value.toLowerCase();
+      cards.forEach(card => {
+        const service = card.getAttribute('data-service');
+        if (service.includes(query)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+

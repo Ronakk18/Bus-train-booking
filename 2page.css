@@ -1,0 +1,185 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background: #f0f2f5;
+  overflow-x: hidden;
+}
+
+.navbar {
+  background-color: #003366;
+  color: white;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  flex-wrap: wrap;
+}
+
+.navbar .logo {
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navbar .logo img {
+  width: 32px;
+  height: 32px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+h2, h3 {
+  color: #003366;
+  text-align: center;
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+label {
+  margin-top: 10px;
+  font-weight: 600;
+  display: block;
+}
+
+select, input[type="date"], input[type="text"], input[type="email"], input[type="number"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.bus-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.bus-item {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: #f8f8f8;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-weight: 500;
+}
+
+.bus-item:hover {
+  background-color: #e0e0e0;
+}
+
+.seats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.seat {
+  padding: 8px;
+  background: #d9d9d9;
+  text-align: center;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-size: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.seat.selected {
+  background-color: #28a745;
+  color: white;
+}
+
+.summary {
+  font-weight: bold;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #005fa3;
+}
+
+.form-section {
+  display: none;
+}
+
+.fare-info {
+  background: #e6f0ff;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 15px;
+  font-weight: 500;
+  color: #003366;
+}
+
+footer {
+  background-color: #003366;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+footer div {
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .navbar a {
+    margin-left: 0;
+  }
+
+  .navbar .logo {
+    font-size: 20px;
+  }
+
+  button {
+    font-size: 14px;
+  }
+
+  .seat {
+    font-size: 10px;
+    padding: 6px;
+  }
+}
